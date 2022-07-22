@@ -1,0 +1,410 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --main-color: rgb(51, 73, 183);
+    --bg-color:  #cec7c7;
+    --text-color: #d29040;
+    --big-font: 3.6rem;
+    --h2-font: 2.26rem;
+    --p-font: 1.1rem;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 110;
+    padding: 20px 320px;
+    background-color: var(--bg-color);
+    box-shadow: rgba(33,35,38,0.1) 0px 10px 10px -10px;
+}
+
+.logo{
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--main-color)
+}
+
+.nav-list{
+    display: flex;
+}
+
+.nav-list a{
+    color: var(--text-color);
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-list a:hover{
+    color: var(--main-color);
+}
+
+#menu-icon{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.link::after{
+    content:'';
+    display: block;
+    width: 0;
+    height: 2px;
+    transition: .3s;
+    background-color: var(--main-color);
+}
+
+.link:hover::after{
+    margin-left: 10px;
+    width: 90%;
+    transition: .3s;
+}
+
+section{
+    padding: 77px 16%;
+}
+
+.home{
+    display: grid;
+    min-height: 92vh;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem;
+    align-items: center;
+}
+.home-img img{
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+}
+
+.home-content h4{
+    font-size: 1.3rem;
+    font-weight: 420;
+    color: var(--main-color);  
+}
+
+.home-content h1{
+    font-size: var(--big-font);
+    color: var(--text-color);
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.home-content p{
+    max-width: 90%;
+    width: 420px;
+    font-size: small;
+    color: #515153;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+
+/* CV styling starts here */
+
+.heading{
+    text-align: center;
+}
+
+.heading h2{
+    font-size: var(--h2-font);
+    
+}
+
+.heading span{
+    color: var(--main-color);
+    font-size: var(--h2-font);
+}
+
+.profile{
+    padding-top: 100px;
+}
+
+.profile-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(330px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.row{
+    padding: 60px 42px;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.row i{
+    font-size: 3.0rem;
+    color: var(--main-color);
+    margin-bottom: 18px;
+    align-items: center;
+}
+.row h3{
+    margin-bottom: 18px;
+    font-weight: 420;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.row p{
+    font-size: 17px;
+    color: #515153;
+    line-height: 28px;
+
+}
+
+.row:hover{
+    border-bottom: 1.8px solid var(--main-color);
+    transition: .37s;
+    transform: scale(1.1);
+}
+
+
+/* Project styling starts here */
+
+.heading{
+    text-align: center;
+}
+
+.heading h2{
+    font-size: var(--h2-font);
+    
+}
+
+.heading span{
+    color: var(--main-color);
+    font-size: var(--h2-font);
+}
+
+.project{
+    padding-top: 100px;
+}
+
+.proj-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(330px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.proj-box{
+    padding: 60px 42px;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.proj-box i{
+    font-size: 2.0rem;
+    color: var(--main-color);
+    margin-bottom: 18px;
+    text-align: center;
+}
+.proj-box h3{
+    margin-bottom: 18px;
+    font-weight: 420;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.proj-box p{
+    font-size: 17px;
+    color: #515153;
+    line-height: 28px;
+}
+
+
+.comment-box{
+    padding: 0;
+    background-color: white;
+    margin: 0;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.comment-box button{
+    align-self: auto;
+}
+
+.comment-box textarea {
+    resize: none;
+    font-size: small;
+}
+
+/*Contact styling starts here */
+
+.contact-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.contact-box{
+    padding: 40px 25px;
+    background: white;
+    cursor: pointer;
+    border-bottom: 1.8px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    border-radius: 10px;
+}
+
+.contact-info-item i{
+    height: 40px;
+    width: 40px;
+    background: var(--main-color);
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 50%;
+    margin-bottom: 13px;
+}
+
+.contact-info-item i:hover{
+    color: white;
+    background: var(--text-color);
+    transition: .37s;
+}
+
+.contact-box h3{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 420;
+    margin-bottom: 13px;
+}
+
+.contact-box h5{
+    color: #515153;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    font-weight: 420;
+}
+
+/* Blog styling starts here */
+
+.blog{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 4rem;
+    align-items: center;
+    padding-top: 90px;
+}
+
+.blog_video{
+    max-width: 90%;
+    width: 500px;
+    height: 100px;
+}
+
+span{
+    font-size: 2rem;
+    color: var(--main-color);
+    font-weight: 580;
+    margin-bottom: 13.3px;
+}
+
+.blog_text h2{
+    font-size: var(--h2-font);
+    color: var(--text-color);
+    margin-bottom: 13.3px;
+}
+
+.blog_text p{
+    color: #515153;
+    font-size: var(--p-font);
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+/* Footer styling starts here */
+
+.footer-content{
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content p{
+    color: var(--main-color);
+    font-size: 0.9rem;
+    font-weight: 480;
+    letter-spacing: 1.8px;
+}
+
+.footer-content a{
+    color: var(--main-color);
+    font-size: 0.82rem;
+}
+/* Responsive starts here */
+
+@media (max-width: 1280px) {
+    header{
+        padding: 15px 40px;}
+    :root{
+        --big-font: 3rem;
+        --h2-font: 2rem;
+    }
+}   
+
+@media (max-width: 1060px) {
+    #menu-icon{
+        display: block;
+    }
+    header .nav-list{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: #cec7c7;
+        transition: .4s;
+    }
+    header .nav-list .active{
+        top: 86px;
+    }
+  
+} 
+
+@media (max-width: 950px) {
+    .home{
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 80px;
+    }
+    .home-content p{
+        width: 100%;
+    }
+}
